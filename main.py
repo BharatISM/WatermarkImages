@@ -62,5 +62,6 @@ if __name__ == "__main__":
         # Passing Image for watermarking
         WatermarkedImage = WatermarkImage(Image, Watermark)
 
+        # Storing the final output images
         cv2.imwrite(OutputImagePath + "/" + ImageNames[i], WatermarkedImage)
         
