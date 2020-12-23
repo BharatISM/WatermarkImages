@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
     # Reading Images
     Images, ImageNames = ReadImage(InputImagePath)
-    Watermark = cv2.imread("kid_logo.png", cv2.IMREAD_UNCHANGED)
+    Watermark = cv2.imread("kid_logo.jpg", cv2.IMREAD_GRAYSCALE)
 
     for i in range(len(Images)):
         Image = Images[i]
