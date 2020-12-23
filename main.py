@@ -25,6 +25,10 @@ def ReadImage(ImagePath):
 	return Images, ImageNames
 
 
+def WatermarkImage(Image, Watermark):
+    return WatermarkedImage
+
+
 if __name__ == "__main__":
     # Setting input and output image paths
     InputImagePath = "InputImages"
@@ -32,3 +36,13 @@ if __name__ == "__main__":
 
     # Reading Images
     Images, ImageNames = ReadImage(InputImagePath)
+    Watermark = cv2.imread("kid_logo.png", cv2.IMREAD_UNCHANGED)
+
+    for i in range(len(Images)):
+        Image = Images[i]
+        
+        # Passing Image for watermarking
+        WatermarkedImage = WatermarkImage(Image, Watermark)
+
+        cv2.imwrite(OutputImagePath + "/" + ImageNames[i], WatermarkedImage)
+        
