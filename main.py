@@ -50,7 +50,7 @@ def WatermarkImage(Image, Watermark):
 if __name__ == "__main__":
     # Setting input and output image paths
     InputImagePath = "InputImages"
-    OutputImagePath = "OutputImages"
+    OutputImagePath = "OutputImages_py"
 
     # Reading Images
     Images, ImageNames = ReadImage(InputImagePath)
